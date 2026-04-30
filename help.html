@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help &amp; FAQ — Homenesty</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #ffffff; color: #1a1a1a; min-height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(160deg, #1e40af, #2563eb);
+      color: white; text-align: center; padding: 60px 24px;
+    }
+    .hero h1 { font-size: 36px; font-weight: 800; margin-top: 8px; }
+    .hero p  { font-size: 18px; opacity: 0.85; margin-top: 10px; }
+    nav {
+      text-align: center; padding: 20px 24px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    nav a { color: #2563eb; text-decoration: none; margin: 0 12px; font-size: 15px; }
+    .content { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    h2 {
+      font-size: 22px; font-weight: 700; margin-top: 48px; margin-bottom: 16px;
+      padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; color: #1e40af;
+    }
+    h2:first-child { margin-top: 0; }
+    .faq { margin-bottom: 28px; }
+    .faq h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .faq p, .faq ul { font-size: 15px; color: #444; line-height: 1.7; }
+    .faq ul { padding-left: 20px; margin-top: 6px; }
+    .faq ul li { margin-bottom: 4px; }
+    .tag {
+      display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px;
+      border-radius: 100px; margin-left: 6px; vertical-align: middle;
+    }
+    .tag.settings { background: #dbeafe; color: #1e40af; }
+    .tag.premium  { background: #ede9fe; color: #6d28d9; }
+    .note {
+      background: #f0f9ff; border-left: 4px solid #2563eb;
+      padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14px;
+      color: #1e3a5f; margin-top: 10px;
+    }
+    footer {
+      text-align: center; padding: 48px 24px;
+      border-top: 1px solid #e5e7eb; color: #999; font-size: 14px; margin-top: 64px;
+    }
+    footer a { color: #2563eb; text-decoration: none; margin: 0 8px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f0f0f; color: #e5e5e5; }
+      nav { border-color: #2a2a2a; }
+      .faq p, .faq ul { color: #aaa; }
+      h2 { border-color: #2a2a2a; }
+      .note { background: #0d2137; border-color: #2563eb; color: #93c5fd; }
+      footer { border-color: #2a2a2a; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div>🏠</div>
+  <h1>Help &amp; FAQ</h1>
+  <p>Everything you need to get the most out of Homenesty</p>
+</div>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/privacy.html">Privacy</a>
+  <a href="/terms.html">Terms</a>
+  <a href="/help.html">Help</a>
+</nav>
+
+<div class="content">
+
+  <h2>Getting Started</h2>
+
+  <div class="faq">
+    <h3>How does Homenesty protect my child?</h3>
+    <p>Homenesty uses two layers of protection working together:</p>
+    <ul>
+      <li><strong>DNS filtering</strong> — Routes DNS queries through Cloudflare 1.1.1.1 for Families, which blocks malware and adult content before a connection is even made.</li>
+      <li><strong>On-device content filter</strong> — Intercepts every web request on your child's device and checks it against 174,000+ blocked domains across 8 categories. This powers the dashboard, block counts, and AI summaries.</li>
+    </ul>
+  </div>
+
+  <div class="faq">
+    <h3>Do I need to install anything on my child's device?</h3>
+    <p>Yes. During setup, Homenesty walks you through installing the DNS profile and content filter on your child's iPhone. Both require your approval as the parent — your child cannot remove them without your Face ID or passcode.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Does my child need an Apple account or a login?</h3>
+    <p>No. Children never log in to Homenesty. Only you (the parent) sign in with your Apple ID. Your child's name is entered manually during setup.</p>
+  </div>
+
+  <h2>DNS &amp; Filtering</h2>
+
+  <div class="faq">
+    <h3>How do I turn off the DNS filter?<span class="tag settings">Settings</span></h3>
+    <p>Go to <strong>Settings → DNS Protection</strong> and toggle off "Cloudflare Family DNS". This removes the Cloudflare profile from your child's device. The on-device content filter and your custom blocks remain active.</p>
+    <div class="note">Useful if Cloudflare is blocking a site you need, or if you're troubleshooting a connection issue. Turn it back on when done.</div>
+  </div>
+
+  <div class="faq">
+    <h3>A website my child needs is being blocked — how do I allow it?<span class="tag settings">Settings</span></h3>
+    <p>Go to <strong>Settings → Allowed Websites</strong> and tap "Allow a Website". Enter the domain (e.g. <code>khanacademy.org</code>). Allowed domains bypass both Cloudflare and the on-device blocklist. Subdomains are included automatically. Swipe left to remove an exception.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I block a specific website?<span class="tag settings">Settings</span></h3>
+    <p>Go to <strong>Settings → Blocked Websites</strong> and tap "Block a Website". Enter the domain (e.g. <code>tiktok.com</code>). This applies to all children and blocks the domain even if the DNS filter is off. Swipe left to remove.</p>
+  </div>
+
+  <div class="faq">
+    <h3>What are Emergency Contacts?<span class="tag settings">Settings</span></h3>
+    <p>Domains listed under Emergency Contacts are always reachable — even when you tap "Pause Internet". Use these for sites your child must always be able to reach, like a school portal or doctor's website.</p>
+  </div>
+
+  <div class="faq">
+    <h3>What categories does Homenesty filter?</h3>
+    <p>Eight categories, each toggled independently from the Dashboard:</p>
+    <ul>
+      <li>Adult content</li>
+      <li>Violence</li>
+      <li>Drugs &amp; alcohol</li>
+      <li>Gambling</li>
+      <li>Social media</li>
+      <li>Gaming</li>
+      <li>Malware &amp; phishing</li>
+      <li>Streaming</li>
+    </ul>
+  </div>
+
+  <h2>Pause &amp; Schedules</h2>
+
+  <div class="faq">
+    <h3>What does "Pause Internet" do?</h3>
+    <p>The red Pause button on the Dashboard stops all web traffic on your child's device instantly — except for Emergency Contact domains. Tap "Resume Internet" to restore access. It takes effect in under a second.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Can I set a bedtime or school schedule?</h3>
+    <p>Yes. Open a child's profile from Settings and configure their school start/end hours and school days. During non-allowed hours the filter automatically blocks all web access. Enable "Exam period" mode for extra restrictions during test weeks.</p>
+  </div>
+
+  <h2>Rewards System<span class="tag premium">Premium</span></h2>
+
+  <div class="faq">
+    <h3>How does the reward system work?</h3>
+    <p>Create tasks (chores, reading, exercise) worth a set number of minutes. When your child completes a task, mark it done — they earn those minutes. Minutes can be redeemed for rewards from a catalogue you define, like 30 minutes of gaming time or a movie night.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Do tasks reset automatically?</h3>
+    <p>Yes. Daily tasks reset each morning at midnight. Weekly tasks reset every Monday. You can also mark tasks complete manually at any time.</p>
+  </div>
+
+  <h2>AI Daily Summary<span class="tag premium">Premium</span></h2>
+
+  <div class="faq">
+    <h3>Where does the AI summary run?</h3>
+    <p>Entirely on your device using Apple's on-device Foundation Models (requires iOS 26 with Apple Intelligence enabled). No data is sent to any server. If your device doesn't support Apple Intelligence, Homenesty generates a template-based summary instead — still private, still on-device.</p>
+  </div>
+
+  <div class="faq">
+    <h3>The summary card shows "Generating…" and never loads.</h3>
+    <p>This usually means no child profile has been added yet, or Apple Intelligence is not enabled. Check <strong>iPhone Settings → Apple Intelligence &amp; Siri</strong>. The summary is cached once generated and won't regenerate until the next day.</p>
+  </div>
+
+  <h2>Privacy &amp; Data</h2>
+
+  <div class="faq">
+    <h3>Does Homenesty see which websites my child visits?</h3>
+    <p>No. The on-device filter never records URLs or hostnames. It only increments an anonymous counter per category (e.g. "+1 adult content blocked today"). These counters are stored locally and never leave the device.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Does Cloudflare see my child's browsing?</h3>
+    <p>Cloudflare processes DNS queries (domain names only — not full URLs or page content) to decide whether to block a domain. Cloudflare 1.1.1.1 for Families does not log individual queries. See <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/" target="_blank">Cloudflare's privacy policy</a>.</p>
+  </div>
+
+  <div class="faq">
+    <h3>Is Homenesty COPPA compliant?</h3>
+    <p>Yes. Homenesty does not collect any personal information from children. No account is created for the child. No data about the child is transmitted to any server. See our <a href="/privacy.html">Privacy Policy</a> for full details.</p>
+  </div>
+
+  <h2>Account &amp; Subscription</h2>
+
+  <div class="faq">
+    <h3>How do I manage or cancel my subscription?</h3>
+    <p>Open the App Store → tap your profile photo → Subscriptions → Homenesty. You can cancel or change your plan here. Cancellations take effect at the end of the current billing period.</p>
+  </div>
+
+  <div class="faq">
+    <h3>I switched phones — how do I restore my subscription?</h3>
+    <p>Open Homenesty, go to the paywall, and tap "Restore Purchases". Sign in with the same Apple ID used to purchase and your subscription will be restored automatically.</p>
+  </div>
+
+  <div class="faq">
+    <h3>How do I contact support?</h3>
+    <p>Email us at <a href="mailto:support@homenesty.app">support@homenesty.app</a>. We typically respond within 24 hours on business days.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 TRUBEES ENTERPRISE LLC. All rights reserved.</p>
+  <p style="margin-top:12px;">
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/help.html">Help &amp; FAQ</a>
+    <a href="mailto:support@homenesty.app">Contact</a>
+  </p>
+</footer>
+
+</body>
+</html>
