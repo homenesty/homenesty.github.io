@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Homenesty</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a1a;
+      background: #ffffff; max-width: 720px; margin: 0 auto; padding: 48px 24px;
+    }
+    header { text-align: center; margin-bottom: 48px; }
+    header .logo { font-size: 48px; }
+    header h1 { font-size: 28px; font-weight: 700; margin-top: 12px; }
+    header p  { color: #666; margin-top: 6px; }
+    h2 { font-size: 20px; font-weight: 700; margin: 40px 0 12px; color: #1a1a1a; }
+    p  { margin-bottom: 14px; color: #333; }
+    ul { margin: 0 0 14px 20px; }
+    li { margin-bottom: 6px; color: #333; }
+    .highlight {
+      background: #f0f7ff; border-left: 4px solid #2563eb;
+      padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 24px 0;
+    }
+    .highlight p { margin: 0; font-weight: 500; color: #1e40af; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: #f3f4f6; text-align: left; padding: 10px 14px; font-size: 14px; }
+    td { padding: 10px 14px; border-bottom: 1px solid #e5e7eb; font-size: 14px; }
+    a  { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #e5e7eb;
+             text-align: center; color: #999; font-size: 13px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f0f0f; color: #e5e5e5; }
+      h2 { color: #e5e5e5; }
+      p, li, td { color: #ccc; }
+      th { background: #1f1f1f; color: #e5e5e5; }
+      td { border-color: #2a2a2a; }
+      .highlight { background: #1e2a3a; border-color: #3b82f6; }
+      .highlight p { color: #93c5fd; }
+      footer { color: #666; border-color: #2a2a2a; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🏠</div>
+  <h1>Privacy Policy</h1>
+  <p>Homenesty Family Protection &nbsp;·&nbsp; Effective date: April 23, 2026</p>
+</header>
+
+<div class="highlight">
+  <p>🔒 The short version: Your family's browsing data never leaves your device. We cannot see what websites your family visits — by design.</p>
+</div>
+
+<h2>1. Who We Are</h2>
+<p>Homenesty ("we", "our", or "us") is a parental control application for iOS developed by Balmu Nedumaran. You can contact us at <a href="mailto:nbalmu@gmail.com">nbalmu@gmail.com</a>.</p>
+
+<h2>2. What Data We Collect</h2>
+<p>We designed Homenesty with a strict data minimisation principle. Here is exactly what we collect — and what we do not.</p>
+
+<table>
+  <thead>
+    <tr><th>Data</th><th>Collected?</th><th>Where stored</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Raw URLs or websites visited</td><td>❌ Never</td><td>—</td></tr>
+    <tr><td>Full browsing history</td><td>❌ Never</td><td>—</td></tr>
+    <tr><td>Message or app content</td><td>❌ Never</td><td>—</td></tr>
+    <tr><td>Location data</td><td>❌ Never</td><td>—</td></tr>
+    <tr><td>Category block counts (e.g. "3 adult sites blocked today")</td><td>✅ Yes</td><td>On your device only</td></tr>
+    <tr><td>Child profile (name, age group)</td><td>✅ Yes</td><td>On your device only</td></tr>
+    <tr><td>Filter rules and schedules</td><td>✅ Yes</td><td>On your device only</td></tr>
+    <tr><td>Reward task balances</td><td>✅ Yes</td><td>On your device only</td></tr>
+    <tr><td>Parent account (Sign in with Apple)</td><td>✅ Yes</td><td>Apple's servers (we receive only an opaque user ID)</td></tr>
+    <tr><td>Crash reports (if enabled)</td><td>Optional</td><td>On your device only in current version</td></tr>
+  </tbody>
+</table>
+
+<h2>3. How Filtering Works — Technical Detail</h2>
+<p>Homenesty uses Apple's <strong>NEURLFilterProvider</strong> API (iOS 26) to filter URLs directly on the child's device. The filtering decision (allow or block) happens entirely on-device. The URL being evaluated is never transmitted to our servers or any third party.</p>
+<p>When a URL is blocked, we increment a local counter for that content category (e.g. "adult: +1"). Only these aggregate counts are stored locally and used to generate your daily summary. The actual URL is discarded immediately after the allow/block decision.</p>
+<p>For DNS-level filtering, Homenesty optionally installs a DNS profile on the child's device that routes DNS queries through <strong>Cloudflare 1.1.1.1 for Families</strong> (<a href="https://family.cloudflare-dns.com" target="_blank">family.cloudflare-dns.com</a>). This is Cloudflare's privacy-first family resolver, which blocks malware and adult content at the DNS level. Homenesty does not operate a DNS server and never receives your DNS queries. Cloudflare's handling of these queries is governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare's privacy policy</a> — they commit to never selling or sharing your DNS data and publish annual transparency reports.</p>
+
+<h2>4. Children's Privacy (COPPA Compliance)</h2>
+<p>Homenesty is a tool for parents and is not directed at children. We comply fully with the Children's Online Privacy Protection Act (COPPA) as updated in 2025.</p>
+<ul>
+  <li>We do not knowingly collect personal information from children under 13.</li>
+  <li>All data relating to a child (name, age group, usage counts) is stored exclusively on the parent's device and the child's device via Apple's secure App Group mechanism.</li>
+  <li>Child data is never transmitted to our servers, shared with third parties, or used for advertising or analytics.</li>
+  <li>We do not build behavioural profiles of children.</li>
+  <li>Parents may delete all child data at any time via Settings → Data &amp; Privacy → Clear All Logs, or by deleting the app.</li>
+  <li>Persistent identifiers for children are opaque device-level identifiers generated by Apple's FamilyControls framework and are never linked to a child's name or email on our servers.</li>
+</ul>
+<p>If you believe we have inadvertently collected information from a child under 13, please contact us immediately at <a href="mailto:nbalmu@gmail.com">nbalmu@gmail.com</a> and we will delete it within 72 hours.</p>
+
+<h2>5. How We Use Data</h2>
+<p>The data we store on your device is used exclusively to:</p>
+<ul>
+  <li>Enforce the content filtering rules you configure</li>
+  <li>Generate your daily summary ("3 adult sites blocked today")</li>
+  <li>Send local notifications about blocking activity</li>
+  <li>Manage your child's screen time reward balance</li>
+</ul>
+<p>We do not use any data for advertising, marketing profiling, or sale to third parties — ever.</p>
+
+<h2>6. Data Sharing</h2>
+<p>We do not sell, rent, or share your personal information with any third party, with the following narrow exceptions:</p>
+<ul>
+  <li><strong>Apple</strong> — Authentication via Sign in with Apple. We receive only an opaque user identifier. Apple's privacy policy governs their handling of your Apple ID.</li>
+  <li><strong>Cloudflare</strong> — If the optional DNS profile is installed, DNS queries are sent to Cloudflare 1.1.1.1 for Families. Cloudflare's <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">privacy policy</a> applies. They do not log or sell DNS query data.</li>
+  <li><strong>Legal requirements</strong> — We may disclose information if required by law. Given that we hold no browsing data on our servers, such a request would yield no meaningful information.</li>
+</ul>
+
+<h2>7. Data Retention and Deletion</h2>
+<p>All data is stored on your device and is subject to your control:</p>
+<ul>
+  <li>Daily aggregate logs are automatically cleared after 30 days by default.</li>
+  <li>You can manually clear all logs at any time: Settings → Data &amp; Privacy → Clear All Logs.</li>
+  <li>Deleting the Homenesty app removes all locally stored data immediately.</li>
+  <li>Signing out removes your account link. Child profiles remain on-device until you delete the app.</li>
+</ul>
+
+<h2>8. Security</h2>
+<p>On-device content filtering uses Apple's NEURLFilterProvider — all filtering decisions happen locally, never touching a server. If the optional DNS profile is installed, queries are encrypted using DNS-over-HTTPS (DoH) before being sent to Cloudflare's servers. Filtering rules and child profiles are stored in Apple's secure App Group container, protected by iOS device encryption. We do not operate a database containing your family's data.</p>
+
+<h2>9. Third-Party SDKs</h2>
+<p>The current version of Homenesty contains no third-party analytics SDKs, advertising SDKs, or tracking libraries. We use only Apple's first-party frameworks (FamilyControls, NetworkExtension, UserNotifications, StoreKit, CloudKit).</p>
+
+<h2>10. Your Rights</h2>
+<p>Depending on your jurisdiction, you may have rights including access, correction, deletion, and portability of your personal data. Since all data is stored on your device, you exercise these rights directly through the app or by deleting it. For any questions, contact us at <a href="mailto:nbalmu@gmail.com">nbalmu@gmail.com</a>.</p>
+<p>California residents: Homenesty does not sell personal information as defined under the CCPA. We do not share personal information for cross-context behavioural advertising.</p>
+
+<h2>11. Changes to This Policy</h2>
+<p>We will notify you of material changes via an in-app notification and by updating the effective date above. Continued use of Homenesty after changes constitutes acceptance of the updated policy.</p>
+
+<h2>12. Contact</h2>
+<p>For privacy questions or COPPA-related requests:<br>
+<strong>Balmu Nedumaran</strong><br>
+<a href="mailto:nbalmu@gmail.com">nbalmu@gmail.com</a>
+</p>
+
+<footer>
+  <p>© 2026 Homenesty. All rights reserved.</p>
+  <p style="margin-top:8px"><a href="index.html">Home</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
